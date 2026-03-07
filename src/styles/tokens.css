@@ -1,0 +1,73 @@
+/* ============================================================
+   YPO DESIGN TOKENS — Light Glassmorphism Theme
+   Youth Path Organisation | Brand colours: Purple #6B2B7D + Blue #00A3FF
+   ============================================================ */
+
+:root {
+    /* ── BRAND ────────────────────────────────── */
+    --primary: #6B2B7D;
+    --primary-light: #8B3DA0;
+    --primary-dark: #4E1F5C;
+    --primary-pale: rgba(107, 43, 125, 0.08);
+    --primary-pale-mid: rgba(107, 43, 125, 0.15);
+
+    --secondary: #00A3FF;
+    --secondary-light: #33B8FF;
+    --secondary-pale: rgba(0, 163, 255, 0.08);
+
+    --accent-gradient: linear-gradient(135deg, #6B2B7D 0%, #00A3FF 100%);
+    --accent-gradient-h: linear-gradient(90deg, #6B2B7D 0%, #00A3FF 100%);
+    --accent-gradient-soft: linear-gradient(135deg, rgba(107, 43, 125, 0.15) 0%, rgba(0, 163, 255, 0.10) 100%);
+
+    /* ── SURFACES ──────────────────────────────── */
+    --bg-page: #F8F7FC;
+    --bg-card: #FFFFFF;
+    --bg-section-alt: #F0EEF9;
+    --bg-section-mid: #EBE8F5;
+
+    /* ── GLASSMORPHISM ─────────────────────────── */
+    --glass-bg: rgba(255, 255, 255, 0.75);
+    --glass-bg-strong: rgba(255, 255, 255, 0.90);
+    --glass-border: rgba(107, 43, 125, 0.15);
+    --glass-border-strong: rgba(107, 43, 125, 0.28);
+    --glass-blur: 20px;
+    --glass-shadow: 0 8px 32px rgba(107, 43, 125, 0.12);
+
+    /* ── TEXT ──────────────────────────────────── */
+    --text-primary: #1A0F22;
+    --text-secondary: #4A3F55;
+    --text-muted: #8B7FA0;
+    --text-on-dark: #FFFFFF;
+    --text-on-dark-sub: rgba(255, 255, 255, 0.78);
+
+    /* ── BORDERS ───────────────────────────────── */
+    --border-subtle: rgba(107, 43, 125, 0.10);
+    --border-medium: rgba(107, 43, 125, 0.25);
+
+    /* ── SHADOWS ───────────────────────────────── */
+    --shadow-xs: 0 1px 6px rgba(107, 43, 125, 0.06);
+    --shadow-sm: 0 2px 12px rgba(107, 43, 125, 0.09);
+    --shadow-md: 0 6px 28px rgba(107, 43, 125, 0.14);
+    --shadow-lg: 0 16px 48px rgba(107, 43, 125, 0.20);
+    --shadow-xl: 0 28px 80px rgba(107, 43, 125, 0.28);
+    --shadow-blue: 0 6px 28px rgba(0, 163, 255, 0.18);
+
+    /* ── TYPOGRAPHY ────────────────────────────── */
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-heading: 'Saira', 'Inter', sans-serif;
+
+    /* ── SPACING ───────────────────────────────── */
+    --section-pad: 96px;
+    --section-pad-sm: 64px;
+
+    /* ── RADIUS ────────────────────────────────── */
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+    --radius-full: 9999px;
+
+    /* ── TRANSITIONS ───────────────────────────── */
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}

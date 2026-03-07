@@ -1,0 +1,752 @@
+/*
+ * =============================================
+ *  YPO BRAND CSS — LIGHT THEME DEFINITIVE OVERRIDES
+ *  Youth Path Organisation
+ *  Colors: Purple #6B2B7D | Electric Blue #00A3FF
+ *  Theme:  Premium Light — white base, purple/blue accents
+ * =============================================
+ */
+
+/* ─── 1. DESIGN TOKENS ────────────────────────────── */
+:root {
+    /* Brand */
+    --bs-primary: #6B2B7D;
+    --bs-primary-rgb: 107, 43, 125;
+    --bs-secondary: #00A3FF;
+    --bs-secondary-rgb: 0, 163, 255;
+    --bs-warning: #6B2B7D;
+    /* kill Bootstrap orange */
+    --bs-warning-rgb: 107, 43, 125;
+
+    /* Custom palette */
+    --primary: #6B2B7D;
+    --primary-light: #8B3DA0;
+    --primary-pale: rgba(107, 43, 125, 0.08);
+    --secondary: #00A3FF;
+    --secondary-pale: rgba(0, 163, 255, 0.08);
+    --accent-gradient: linear-gradient(135deg, #6B2B7D 0%, #00A3FF 100%);
+
+    /* Light surfaces */
+    --bg-page: #F8F7FC;
+    --bg-card: #FFFFFF;
+    --bg-section-alt: #F0EEF9;
+    --border-subtle: rgba(107, 43, 125, 0.12);
+    --border-medium: rgba(107, 43, 125, 0.28);
+
+    /* Text */
+    --text-primary: #1A0F22;
+    --text-secondary: #4A3F55;
+    --text-muted: #8B7FA0;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 12px rgba(107, 43, 125, 0.08);
+    --shadow-md: 0 6px 28px rgba(107, 43, 125, 0.13);
+    --shadow-lg: 0 16px 48px rgba(107, 43, 125, 0.2);
+    --shadow-blue: 0 6px 28px rgba(0, 163, 255, 0.18);
+
+    /* Glow tokens */
+    --glow-purple: rgba(107, 43, 125, 0.35);
+    --glow-blue: rgba(0, 163, 255, 0.35);
+
+    /* Legacy aliases */
+    --dark: #1A0F22;
+    --light: #FFFFFF;
+    --surface-glass: rgba(255, 255, 255, 0.8);
+    --border-glass: rgba(107, 43, 125, 0.15);
+}
+
+/* ─── 2. GLOBAL BASE ──────────────────────────────── */
+html,
+body {
+    background: var(--bg-page) !important;
+    color: var(--text-secondary) !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-primary) !important;
+    font-family: 'Saira', sans-serif !important;
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+/* ─── 3. GLASSMORPHISM — LIGHT VARIANT ────────────── */
+.glass {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid var(--border-glass) !important;
+    box-shadow: var(--shadow-md);
+}
+
+/* ─── 4. NAVIGATION ───────────────────────────────── */
+.fixed-top {
+    background: rgba(255, 255, 255, 0.88) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-subtle);
+    box-shadow: 0 2px 20px rgba(107, 43, 125, 0.08);
+}
+
+.top-bar {
+    background: var(--text-primary) !important;
+    border-bottom: 1px solid rgba(107, 43, 125, 0.5) !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.top-bar a,
+.top-bar i,
+.top-bar span,
+.top-bar p {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Navbar brand gradient text */
+.navbar .navbar-brand h1 {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+}
+
+/* Toggler icon on light bg */
+.navbar-toggler {
+    border: 1.5px solid var(--border-medium);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%236B2B7D' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar .navbar-nav .nav-link {
+    color: var(--text-primary) !important;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    transition: color 0.25s, text-shadow 0.25s;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--primary) !important;
+    text-shadow: 0 0 18px rgba(107, 43, 125, 0.3);
+}
+
+/* Dropdown — light frosted */
+.dropdown-menu {
+    background: rgba(255, 255, 255, 0.96) !important;
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--border-subtle) !important;
+    border-radius: 12px !important;
+    box-shadow: var(--shadow-md);
+}
+
+.dropdown-item {
+    color: var(--text-primary) !important;
+    transition: background 0.2s, padding-left 0.2s;
+}
+
+.dropdown-item:hover {
+    background: var(--primary-pale) !important;
+    color: var(--primary) !important;
+    padding-left: 1.5rem;
+}
+
+/* ─── 5. BUTTONS ──────────────────────────────────── */
+.btn-primary {
+    background: var(--accent-gradient) !important;
+    border: none !important;
+    color: #fff !important;
+    box-shadow: 0 4px 16px rgba(107, 43, 125, 0.35);
+    border-radius: 8px !important;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: transform 0.25s, box-shadow 0.25s !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(107, 43, 125, 0.55) !important;
+    color: #fff !important;
+}
+
+.btn-outline-primary {
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    border-radius: 8px !important;
+    background: transparent !important;
+    transition: all 0.25s !important;
+}
+
+.btn-outline-primary:hover {
+    background: var(--accent-gradient) !important;
+    color: #fff !important;
+    border-color: transparent !important;
+    box-shadow: 0 4px 16px rgba(107, 43, 125, 0.35);
+}
+
+/* Secondary outline: blue */
+.btn-outline-secondary {
+    color: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+    background: transparent !important;
+}
+
+.btn-outline-secondary:hover {
+    background: var(--secondary) !important;
+    color: #fff !important;
+    border-color: transparent !important;
+    box-shadow: 0 4px 16px rgba(0, 163, 255, 0.35);
+}
+
+/* ─── 6. CAROUSEL / HERO ──────────────────────────── */
+.carousel-caption {
+    background: linear-gradient(to top,
+            rgba(10, 4, 18, 0.92) 0%,
+            rgba(107, 43, 125, 0.3) 100%) !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+/* ─── 7. PAGE HEADER ──────────────────────────────── */
+.page-header {
+    background: linear-gradient(rgba(10, 4, 18, 0.85),
+            rgba(107, 43, 125, 0.5)), url(../img/carousel-1.jpg) center center no-repeat !important;
+    background-size: cover !important;
+}
+
+/* ─── 8. SECTION PILLS / LABELS ───────────────────── */
+.d-inline-block.rounded-pill,
+.rounded-pill.bg-secondary,
+.rounded-pill {
+    background: var(--secondary-pale) !important;
+    color: var(--secondary) !important;
+    border: 1px solid rgba(0, 163, 255, 0.3) !important;
+    letter-spacing: 0.5px;
+}
+
+/* ─── 9. CAUSES CARDS ─────────────────────────────── */
+.causes-item {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-subtle) !important;
+    border-radius: 16px !important;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.35s ease, box-shadow 0.35s ease !important;
+    overflow: hidden;
+}
+
+.causes-item:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: var(--shadow-lg) !important;
+    border-color: var(--border-medium) !important;
+}
+
+.causes-item .bg-light,
+.causes-item .bg-white {
+    background: transparent !important;
+}
+
+/* Category badge */
+.causes-item .bg-primary {
+    background: var(--accent-gradient) !important;
+}
+
+/* Progress bar */
+.progress-bar {
+    background: var(--accent-gradient) !important;
+}
+
+/* Progress track */
+.causes-item .progress {
+    background: rgba(107, 43, 125, 0.1);
+}
+
+/* ─── 10. SERVICE CARDS ───────────────────────────── */
+.service-item {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-subtle) !important;
+    border-radius: 16px !important;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.35s ease !important;
+}
+
+.service-item:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: var(--shadow-blue) !important;
+    border-color: rgba(0, 163, 255, 0.35) !important;
+}
+
+.service-item i {
+    color: var(--secondary);
+}
+
+/* ─── 11. TEAM CARDS ──────────────────────────────── */
+.team-item .team-text {
+    background: var(--bg-card) !important;
+    backdrop-filter: none;
+    border-top: 2px solid var(--border-subtle) !important;
+    border-radius: 0 0 12px 12px !important;
+    box-shadow: var(--shadow-sm);
+}
+
+.team-item:hover .team-text {
+    background: var(--primary-pale) !important;
+    border-color: var(--primary) !important;
+}
+
+.team-item .team-social .btn {
+    background: rgba(107, 43, 125, 0.08);
+    color: var(--primary);
+    border: 1px solid rgba(107, 43, 125, 0.25);
+    transition: all 0.25s;
+}
+
+.team-item .team-social .btn:hover {
+    background: var(--accent-gradient);
+    color: #fff;
+    border-color: transparent;
+}
+
+/* ─── 12. DONATE SECTION ──────────────────────────── */
+.donate {
+    background: linear-gradient(rgba(10, 4, 18, 0.92),
+            rgba(10, 4, 18, 0.92)), url(../img/carousel-2.jpg) no-repeat center center !important;
+    background-size: cover !important;
+}
+
+.donate .bg-white,
+.donate .bg-light {
+    background: rgba(255, 255, 255, 0.12) !important;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    border-radius: 16px !important;
+}
+
+.donate .form-control,
+.donate input {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    color: #fff !important;
+    border-radius: 8px;
+}
+
+.donate .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.btn-group .btn-light {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.btn-group input[type="radio"]:checked+label,
+.btn-group .btn-light:hover {
+    background: rgba(107, 43, 125, 0.3) !important;
+    color: #00A3FF !important;
+    border-color: #00A3FF !important;
+    box-shadow: 0 0 14px rgba(0, 163, 255, 0.3);
+}
+
+/* ─── 13. ABOUT QUOTE BOX ──────────────────────────── */
+.bg-light.border-bottom.border-5.border-primary {
+    background: var(--primary-pale) !important;
+    border-color: var(--primary) !important;
+    border-radius: 10px !important;
+    backdrop-filter: none;
+}
+
+.border-5.border-primary {
+    border-color: var(--primary) !important;
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+/* ─── 14. TESTIMONIAL ──────────────────────────────── */
+.testimonial-carousel .owl-item .testimonial-text {
+    background: var(--bg-card) !important;
+    backdrop-filter: none;
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px !important;
+    box-shadow: var(--shadow-sm);
+    color: var(--text-primary);
+}
+
+.testimonial-carousel .owl-item .testimonial-text * {
+    color: var(--text-primary) !important;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text {
+    background: var(--accent-gradient) !important;
+    border-color: transparent !important;
+    box-shadow: 0 10px 40px rgba(107, 43, 125, 0.45);
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text * {
+    color: #FFFFFF !important;
+}
+
+/* ─── 15. FORMS (CONTACT etc.) ─────────────────────── */
+.form-control {
+    background: #FFFFFF !important;
+    border: 1.5px solid var(--border-subtle) !important;
+    color: var(--text-primary) !important;
+    border-radius: 8px;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.form-control:focus {
+    background: #FFFFFF !important;
+    border-color: var(--secondary) !important;
+    box-shadow: 0 0 0 3px rgba(0, 163, 255, 0.15) !important;
+    color: var(--text-primary) !important;
+}
+
+.form-control::placeholder {
+    color: var(--text-muted) !important;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* ─── 16. FOOTER ───────────────────────────────────── */
+.footer {
+    background: var(--text-primary) !important;
+    border-top: 3px solid;
+    border-image: var(--accent-gradient) 1;
+}
+
+.footer .copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.footer .copyright a {
+    color: var(--secondary) !important;
+}
+
+.footer .copyright a:hover {
+    color: #fff !important;
+}
+
+.footer .btn.btn-square {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    transition: all 0.25s;
+}
+
+.footer .btn.btn-square:hover {
+    background: var(--accent-gradient);
+    border-color: transparent !important;
+    color: #fff !important;
+}
+
+/* ─── 17. BACK TO TOP ──────────────────────────────── */
+a.back-to-top {
+    background: var(--accent-gradient) !important;
+    border: none !important;
+    box-shadow: 0 4px 20px rgba(107, 43, 125, 0.45);
+    color: #fff !important;
+    transition: transform 0.25s, box-shadow 0.25s !important;
+}
+
+a.back-to-top:hover {
+    transform: translateY(-4px) scale(1.08);
+    box-shadow: 0 8px 28px rgba(107, 43, 125, 0.65) !important;
+}
+
+/* ─── 18. SPINNER ──────────────────────────────────── */
+#spinner {
+    background: var(--bg-page) !important;
+}
+
+.spinner-grow {
+    color: var(--primary) !important;
+}
+
+/* ─── 19. BACKGROUNDS / CONTAINERS ────────────────── */
+.bg-white {
+    background: var(--bg-card) !important;
+    color: var(--text-primary) !important;
+}
+
+.bg-light {
+    background: var(--bg-section-alt) !important;
+    color: var(--text-primary) !important;
+}
+
+.bg-dark {
+    background: var(--text-primary) !important;
+    color: #FFFFFF !important;
+}
+
+.bg-primary {
+    background: var(--accent-gradient) !important;
+    color: #FFFFFF !important;
+}
+
+.bg-secondary {
+    background: var(--secondary-pale) !important;
+    color: var(--secondary) !important;
+}
+
+/* ─── 20. ABOUT IMAGE BORDER STRIP ────────────────── */
+.position-absolute.bg-white {
+    background: var(--bg-card) !important;
+    border: 2px solid var(--border-medium) !important;
+    box-shadow: var(--shadow-md);
+}
+
+/* ─── 21. COUNTER / FUNFACT ICONS ──────────────────── */
+.counter-item .bg-primary {
+    background: var(--accent-gradient) !important;
+}
+
+/* ─── 22. BORDER OVERRIDES ─────────────────────────── */
+.border-primary {
+    border-color: var(--primary) !important;
+}
+
+/* ─── 23. OWL CAROUSEL DOTS ───────────────────────── */
+.owl-dots .owl-dot.active span,
+.owl-dots .owl-dot:hover span {
+    background: var(--primary) !important;
+}
+
+/* ─── 24. CARD / CONTAINER LIGHT SURFACE ──────────── */
+.card {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-subtle) !important;
+    border-radius: 14px !important;
+    box-shadow: var(--shadow-sm);
+    color: var(--text-primary) !important;
+}
+
+.card-header {
+    background: var(--primary-pale) !important;
+    border-bottom: 1px solid var(--border-subtle) !important;
+    color: var(--text-primary) !important;
+}
+
+/* ─── 25. SUBTLE SECTION DIVIDER ──────────────────── */
+section+section {
+    border-top: 1px solid var(--border-subtle);
+}
+
+/* ─── 26. HOVER MICRO-ANIMATIONS ──────────────────── */
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.service-item:hover i {
+    animation: floatUp 1.2s ease-in-out infinite;
+}
+
+/* ─── 27. SELECTION HIGHLIGHT ──────────────────────── */
+::selection {
+    background: rgba(107, 43, 125, 0.25);
+    color: var(--text-primary);
+}
+
+/* ─── 28. SCROLLBAR STYLING ────────────────────────── */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-page);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #6B2B7D, #00A3FF);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #8B3DA0, #33B8FF);
+}
+
+/* ─── 29. CONTAINER LIGHT TINT AREAS ──────────────── */
+.container-xxl.bg-light,
+.py-5.bg-light {
+    background: var(--bg-section-alt) !important;
+}
+
+/* Alternating row tint using nth-of-type so sections feel airy */
+section:nth-of-type(even) {
+    background: var(--bg-section-alt);
+}
+
+section:nth-of-type(odd) {
+    background: var(--bg-page);
+}
+
+/* ─── 30. NAVBAR-DARK OVERRIDE (HTML unchanged) ─── */
+/* Bootstrap's .navbar-dark forces white text.
+   We override that here so the frosted-white nav looks correct. */
+.navbar.navbar-dark .navbar-nav .nav-link {
+    color: var(--text-primary) !important;
+}
+
+.navbar.navbar-dark .navbar-nav .nav-link:hover,
+.navbar.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--primary) !important;
+    text-shadow: 0 0 18px rgba(107, 43, 125, 0.25);
+}
+
+/* Navbar brand text on light background */
+.navbar.navbar-dark .navbar-brand h1 {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Dropdown caret */
+.navbar.navbar-dark .dropdown-toggle::after {
+    color: var(--text-primary);
+}
+
+/* ─── 31. NAV PILLS — TEAM TABS ────────────────── */
+.nav-pills .nav-link {
+    color: var(--primary) !important;
+    background: transparent;
+    border: 1.5px solid var(--border-subtle);
+    border-radius: 50px !important;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 8px 22px;
+    margin: 4px;
+    transition: all 0.25s;
+}
+
+.nav-pills .nav-link:hover {
+    background: var(--primary-pale) !important;
+    border-color: var(--border-medium);
+    color: var(--primary) !important;
+}
+
+.nav-pills .nav-link.active {
+    background: var(--accent-gradient) !important;
+    border-color: transparent !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 16px rgba(107, 43, 125, 0.35);
+}
+
+/* ─── 32. SPONSOR / PARTNER LOGO STRIP ─────────── */
+.partner-logo-strip {
+    filter: grayscale(60%);
+    opacity: 0.7;
+    transition: filter 0.3s, opacity 0.3s;
+}
+
+.partner-logo-strip:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* ─── 33. HERO TEXT CONTRAST FIX ───────────────── */
+/* Hero / carousel is still dark overlay on photo — keep text white */
+.carousel-caption h1,
+.carousel-caption h2,
+.carousel-caption p {
+    color: #FFFFFF !important;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.page-header h1,
+.page-header .breadcrumb-item,
+.page-header .breadcrumb-item a,
+.page-header .breadcrumb-item+.breadcrumb-item::before {
+    color: #FFFFFF !important;
+}
+
+/* ─── 34. GLASS EFFECT — LIGHT VARIANT ─────────── */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.88) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(107, 43, 125, 0.14) !important;
+    box-shadow: 0 4px 24px rgba(107, 43, 125, 0.1) !important;
+}
+
+/* ─── 35. FORM FLOATING LABELS ──────────────────── */
+.form-floating label {
+    color: var(--text-muted) !important;
+}
+
+/* ─── 36. TABLE LIGHT ───────────────────────────── */
+.table {
+    color: var(--text-primary) !important;
+}
+
+.table th {
+    background: var(--primary-pale) !important;
+    color: var(--primary) !important;
+    border-color: var(--border-subtle) !important;
+}
+
+.table td {
+    border-color: var(--border-subtle) !important;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background: rgba(107, 43, 125, 0.03) !important;
+}
+
+/* ─── 37. INPUT GROUP ADDON ─────────────────────── */
+.input-group-text {
+    background: var(--bg-section-alt) !important;
+    border: 1.5px solid var(--border-subtle) !important;
+    color: var(--primary) !important;
+}
+
+/* ─── 38. ALERT COLORS ──────────────────────────── */
+.alert-primary {
+    background: var(--primary-pale) !important;
+    border-color: var(--border-medium) !important;
+    color: var(--primary) !important;
+}
+
+/* ─── 39. BADGE ─────────────────────────────────── */
+.badge.bg-primary {
+    background: var(--accent-gradient) !important;
+    color: #FFFFFF !important;
+}
+
+.badge.bg-secondary {
+    background: var(--secondary-pale) !important;
+    color: var(--secondary) !important;
+}
+
+/* ─── 40. FOCUS RING ────────────────────────────── */
+:focus-visible {
+    outline: 2px solid var(--secondary);
+    outline-offset: 2px;
+}

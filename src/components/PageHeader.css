@@ -1,0 +1,46 @@
+.page-header {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0 80px;
+    overflow: hidden;
+}
+
+.page-header__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(10, 4, 18, 0.88) 0%, rgba(107, 43, 125, 0.6) 100%);
+}
+
+.page-header__content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.page-header__title {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    color: #fff !important;
+    margin-bottom: 16px;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+
+.page-header__crumbs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.page-header__crumbs li+li::before {
+    content: '›';
+    margin-right: 8px;
+}
+
+.page-header__crumbs .active {
+    color: var(--secondary);
+}
