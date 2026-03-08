@@ -24,7 +24,7 @@
     --primary-pale: rgba(107, 43, 125, 0.08);
     --secondary: #00A3FF;
     --secondary-pale: rgba(0, 163, 255, 0.08);
-    --accent-gradient: linear-gradient(135deg, #6B2B7D 0%, #00A3FF 100%);
+    --accent-gradient: #281453;
 
     /* Light surfaces */
     --bg-page: #F8F7FC;
@@ -88,16 +88,16 @@ p {
 
 /* ─── 4. NAVIGATION ───────────────────────────────── */
 .fixed-top {
-    background: rgba(255, 255, 255, 0.88) !important;
+    background: rgba(255, 255, 255, 0.95) !important;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border-subtle);
-    box-shadow: 0 2px 20px rgba(107, 43, 125, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
 }
 
 .top-bar {
     background: var(--text-primary) !important;
-    border-bottom: 1px solid rgba(107, 43, 125, 0.5) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
     color: rgba(255, 255, 255, 0.85) !important;
 }
 
@@ -123,7 +123,7 @@ p {
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%236B2B7D' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23281453' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .navbar .navbar-nav .nav-link {
@@ -161,36 +161,37 @@ p {
 
 /* ─── 5. BUTTONS ──────────────────────────────────── */
 .btn-primary {
-    background: var(--accent-gradient) !important;
+    background: #281453 !important;
     border: none !important;
     color: #fff !important;
-    box-shadow: 0 4px 16px rgba(107, 43, 125, 0.35);
+    box-shadow: 0 4px 16px rgba(40, 20, 83, 0.35);
     border-radius: 8px !important;
     font-weight: 600;
     letter-spacing: 0.3px;
-    transition: transform 0.25s, box-shadow 0.25s !important;
+    transition: transform 0.25s, box-shadow 0.25s, background 0.25s !important;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(107, 43, 125, 0.55) !important;
+    box-shadow: 0 8px 24px rgba(40, 20, 83, 0.55) !important;
+    background: #170A34 !important;
     color: #fff !important;
 }
 
 .btn-outline-primary {
-    color: var(--primary) !important;
-    border-color: var(--primary) !important;
+    color: #281453 !important;
+    border-color: #281453 !important;
     border-radius: 8px !important;
     background: transparent !important;
     transition: all 0.25s !important;
 }
 
 .btn-outline-primary:hover {
-    background: var(--accent-gradient) !important;
+    background: #281453 !important;
     color: #fff !important;
     border-color: transparent !important;
-    box-shadow: 0 4px 16px rgba(107, 43, 125, 0.35);
+    box-shadow: 0 4px 16px rgba(40, 20, 83, 0.35);
 }
 
 /* Secondary outline: blue */
@@ -210,8 +211,8 @@ p {
 /* ─── 6. CAROUSEL / HERO ──────────────────────────── */
 .carousel-caption {
     background: linear-gradient(to top,
-            rgba(10, 4, 18, 0.92) 0%,
-            rgba(107, 43, 125, 0.3) 100%) !important;
+            rgba(10, 4, 18, 0.95) 0%,
+            rgba(0, 0, 0, 0.1) 100%) !important;
 }
 
 .carousel-control-prev-icon,
@@ -222,8 +223,8 @@ p {
 
 /* ─── 7. PAGE HEADER ──────────────────────────────── */
 .page-header {
-    background: linear-gradient(rgba(10, 4, 18, 0.85),
-            rgba(107, 43, 125, 0.5)), url(../img/carousel-1.jpg) center center no-repeat !important;
+    background: linear-gradient(rgba(10, 4, 18, 0.75),
+            rgba(10, 4, 18, 0.45)), url(../img/carousel-1.jpg) center center no-repeat !important;
     background-size: cover !important;
 }
 

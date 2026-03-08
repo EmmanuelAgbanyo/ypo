@@ -15,9 +15,9 @@
     --secondary-light: #33B8FF;
     --secondary-pale: rgba(0, 163, 255, 0.08);
 
-    --accent-gradient: linear-gradient(135deg, #6B2B7D 0%, #00A3FF 100%);
-    --accent-gradient-h: linear-gradient(90deg, #6B2B7D 0%, #00A3FF 100%);
-    --accent-gradient-soft: linear-gradient(135deg, rgba(107, 43, 125, 0.15) 0%, rgba(0, 163, 255, 0.10) 100%);
+    --accent-gradient: #281453;
+    --accent-gradient-h: #281453;
+    --accent-gradient-soft: rgba(40, 20, 83, 0.15);
 
     /* ── SURFACES ──────────────────────────────── */
     --bg-page: #F8F7FC;

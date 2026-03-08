@@ -10,7 +10,7 @@
     --secondary: #00A3FF;
     /* Electric Blue */
     --secondary-pale: rgba(0, 163, 255, 0.08);
-    --accent-gradient: linear-gradient(135deg, #6B2B7D 0%, #00A3FF 100%);
+    --accent-gradient: #281453;
 
     /* Light Theme Surfaces */
     --bg-page: #F8F7FC;
@@ -136,28 +136,29 @@ a:hover {
 }
 
 .btn.btn-primary {
-    background: var(--accent-gradient);
+    background: #281453;
     border: none;
     color: #FFFFFF;
-    box-shadow: 0 4px 16px rgba(107, 43, 125, 0.35);
+    box-shadow: 0 4px 16px rgba(40, 20, 83, 0.35);
 }
 
 .btn.btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(107, 43, 125, 0.55);
+    box-shadow: 0 8px 24px rgba(40, 20, 83, 0.55);
+    background: #170A34;
 }
 
 .btn.btn-outline-primary {
-    color: var(--primary);
-    border-color: var(--primary);
+    color: #281453;
+    border-color: #281453;
     background: transparent;
 }
 
 .btn.btn-outline-primary:hover {
-    background: var(--accent-gradient);
+    background: #281453;
     color: #FFFFFF;
     border-color: transparent;
-    box-shadow: 0 4px 16px rgba(107, 43, 125, 0.35);
+    box-shadow: 0 4px 16px rgba(40, 20, 83, 0.35);
 }
 
 .btn-square {
@@ -264,8 +265,8 @@ a:hover {
     justify-content: center;
     text-align: center;
     background: linear-gradient(to top,
-            rgba(10, 4, 18, 0.88) 0%,
-            rgba(107, 43, 125, 0.35) 100%);
+            rgba(10, 4, 18, 0.95) 0%,
+            rgba(0, 0, 0, 0.1) 100%);
     z-index: 1;
 }
 
@@ -300,8 +301,8 @@ a:hover {
 .page-header {
     padding-top: 12rem;
     padding-bottom: 6rem;
-    background: linear-gradient(rgba(10, 4, 18, 0.82),
-            rgba(107, 43, 125, 0.5)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(10, 4, 18, 0.75),
+            rgba(10, 4, 18, 0.45)), url(../img/carousel-1.jpg) center center no-repeat;
     background-size: cover;
 }
 

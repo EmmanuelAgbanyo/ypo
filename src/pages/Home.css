@@ -30,7 +30,7 @@
 .hero__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(10, 4, 18, 0.91) 0%, rgba(107, 43, 125, 0.62) 100%);
+    background: linear-gradient(135deg, rgba(10, 4, 18, 0.91) 0%, rgba(10, 4, 18, 0.4) 100%);
 }
 
 .hero__content {
@@ -854,7 +854,7 @@
 .cta-banner__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(10, 4, 18, 0.92) 0%, rgba(107, 43, 125, 0.7) 100%);
+    background: linear-gradient(135deg, rgba(10, 4, 18, 0.92) 0%, rgba(10, 4, 18, 0.6) 100%);
 }
 
 .cta-banner__inner {
